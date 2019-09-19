@@ -13,6 +13,15 @@ public class Calculate {
         System.out.println(multiply(num1, num2));
     }
 
+    /**
+     * 关键点：1、一个数乘以一个数的结果长度必定小于或者等于这两个数长度之和
+     * 2、把char字符转成int字符，需要这个字符减去字符0，因为字符和数字在内存里都是以ASCII形式存储的，‘0’字符的ASCII是十六进制的30，十进制的48
+     *  char1 = 1 2 3 0
+     *  n1 = 49 50 51 48
+     *  n[i] = char[i] - '0';
+     *
+     *
+     */
     private static String multiply(String num1, String num2) {
         // 把字符串转成char数组
         char[] chars1 = num1.toCharArray();

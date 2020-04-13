@@ -15,14 +15,16 @@ public class HashMapTest {
         HashMap<String, String> hashMap = new HashMap<>();
 
         hashMap.put("first", "Monedy");
-        List<String> stringList = new ArrayList<>();
-        List<Integer> integerList = new ArrayList<>();
-
-        formatList(stringList);
-        formatList(integerList);
+        hashMap.put("first", "Monedy1");
+        System.out.println(hashMap.size());
+//        List<String> stringList = new ArrayList<>();
+//        List<Integer> integerList = new ArrayList<>();
+//
+//        formatList(stringList);
+//        formatList(integerList);
     }
 
-    public static void formatList(List<?> list) {
-
-    }
+//    public static void formatList(List<?> list) {
+//
+//    }
 }

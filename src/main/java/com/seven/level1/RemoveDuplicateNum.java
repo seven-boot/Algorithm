@@ -22,6 +22,9 @@ public class RemoveDuplicateNum {
      *
      * 你不需要考虑数组中超出新长度后面的元素。
      *
+     * 题解：可以使用（双指针法）快慢指针，i j ，只要nums[i] == nums[j]，增加 j 跳过重复项，
+     * 如果 nums[i] != nums[j]，必须把 nums[j] 的值赋值给 nums[i+1]
+     *
      */
 
     public static void main(String[] args) {

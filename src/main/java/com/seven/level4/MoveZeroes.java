@@ -1,5 +1,7 @@
 package com.seven.level4;
 
+import java.util.Arrays;
+
 /**
  * @author QH
  * @date 2020/5/18
@@ -11,20 +13,17 @@ public class MoveZeroes {
      * 解题思路：首先题目并没有要求排序，不考虑排序的情况下
      */
     public static void main(String[] args) {
-        int[] nums = {0, 1, 0, 3, 12};
+        int[] nums = {0, 1, 0, 3, 12, 0, 32, 9};
         moveZeroes(nums);
-        for (int item :
-                nums) {
-            System.out.println(item);
-        }
+        System.out.println(Arrays.toString(nums));
     }
 
     public static void moveZeroes(int[] nums) {
         int index = 0;
-        for (int item :
+        for (int num :
                 nums) {
-            if (item != 0) {
-                nums[index++] = item;
+            if (num != 0) {
+                nums[index++] = num;
             }
         }
         while (index < nums.length) {

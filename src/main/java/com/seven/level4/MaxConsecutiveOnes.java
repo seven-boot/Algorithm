@@ -28,12 +28,23 @@ public class MaxConsecutiveOnes {
      * @param nums 给定数组
      * @return
      */
-    private static int findMaxConsecutiveOnes(int[] nums) {
+    /*private static int findMaxConsecutiveOnes(int[] nums) {
         int len = 0, max = 0;
         for (int num : nums) {
             len = num == 0 ? 0 : len + 1;
             max = Math.max(len, max);
         }
         return max;
+    }*/
+
+    private static int findMaxConsecutiveOnes(int[] nums) {
+        int pre = -1, max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                max = Math.max(i - pre - 1, max);
+                pre = i;
+            }
+        }
+        return Math.max(nums.length - pre - 1, max);
     }
 }
